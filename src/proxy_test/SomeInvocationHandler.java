@@ -12,6 +12,20 @@ public class SomeInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                
+        try{
+            int i = 0;
+
+            for(Object a : args){
+                if(a.getClass() == String.class){
+                    args[i] = "¯\\_(ツ)_/¯";
+                }
+                i++;
+            }
+        }
+        catch(Exception e){
+            
+        }
         
         long a = System.nanoTime();
         Object o = method.invoke(obj, args);

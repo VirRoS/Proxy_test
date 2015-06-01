@@ -14,5 +14,7 @@ public class Proxy_test {
                 User.class.getInterfaces(),
                 new SomeInvocationHandler(user));
         userProxy.forech();
+        
+        userProxy.myName("Tom");
     }
 }
